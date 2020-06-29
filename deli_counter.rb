@@ -5,18 +5,22 @@
 
 katz_deli = ["Logan", "Avi", "Spencer"]
 
-def line(array)
-  line_length = array.length
+def line(array)                  #our line
+  line_length = array.length    #number of people in line
   if line_length == 0 
     puts "The line is currently empty."
   else 
-    count = 0
-    line_up = "The line is currently:"
-      while count < line_length do
-        line_up = line_up + " #{count + 1}. " + array[count]
+    count = 0                             # the line begins at index 0
+    line_up = "The line is currently:"    #this is the string for every place in line
+      while count < line_length do        #array.length is 1 or more people in line
+        line_up = line_up + " #{count + 1}. " + array[count] 
+        
+    #we will take our string
+  #plus our count plus one
+  #and increment them by 1 
         count += 1 
   end
-      puts line_up
+      puts line_up       #All of that is strored in #line_up, so we can puts it all out
   end
 end
 
@@ -37,7 +41,7 @@ def take_a_number(array, name)
   end
   
   #input is an array position(element) of string and integer
-  #output is a string of persons name (use index and name)
+  #output is a string of persons name (use index)
              #a string when there is no one in line (array is at 0) use length
              
   def now_serving(array)
